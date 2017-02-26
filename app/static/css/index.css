@@ -3,9 +3,44 @@ body {
     padding-top: 70px;
 }
 
+a,a:hover,a:select{
+    text-decoration: none;
+}
+
 #chart{
     background: #FFF;
 }
+
+#inputs{
+    float: right;
+    border: 1px dashed #ddd;
+    height: 450px;
+    width: 300px;
+    margin: 20px 20px 0 0;
+}
+
+.xy-label{
+    text-align: center;
+    margin: 0 0 10px 40px;
+}
+
+.col-md-4{
+    padding:5px;
+}
+
+.xy-input{
+    width: 80%;
+    margin: 10px auto;
+}
+
+.form-horizontal{
+    padding:15px;
+}
+
+.breadcrumb-btn{
+    margin-bottom: 20px;
+}
+
 
 .highlight {
     padding: 9px 14px;
@@ -15,9 +50,7 @@ body {
     border-radius: 4px;
 }
 
-
-
-.grid line {
+.x-grid line, .y-grid line {
   stroke: lightgrey;
   stroke-opacity: 0.7;
   shape-rendering: crispEdges;
@@ -25,4 +58,10 @@ body {
 
 .grid path {
   stroke-width: 0;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
 }

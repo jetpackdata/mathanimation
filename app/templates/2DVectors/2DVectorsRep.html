@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block page_content %}
+
+    <a type='button' href="/2DVectors" class='btn btn-default btn-sm breadcrumb-btn'>
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Back to 2D Vectors
+    </a>
+
+    <div class="highlight" ng-controller="Vector2DController as Vector2DCtrl">
+        <h1>2D Vector Representation</h1>
+        <div id="chart">
+            <div id='inputs' class='row'>
+                <div class="col-md-4">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="x1" class="xy-label control-label">x1</label>
+                            <input type="number" class="xy-input form-control" ng-model='Vector2DCtrl.coord[0]["x"]' ng-change='Vector2DCtrl.updateLine(1)' id="x1" placeholder="x">
+                        </div>
+                        <div class="form-group">
+                            <label for="y1" class="xy-label control-label">y1</label>
+                            <input type="number" class="xy-input form-control" ng-model='Vector2DCtrl.coord[0]["y"]' ng-change='Vector2DCtrl.updateLine(1)' id="y1" placeholder="y">
+                        </div>
+                    </form>
+
+                </div>
+                <div class="col-md-4">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="x2" class="xy-label control-label">x2</label>
+                            <input type="number" class="xy-input form-control" ng-model='Vector2DCtrl.coord[1]["x"]' ng-change='Vector2DCtrl.updateLine(2)' id="x2" placeholder="x">
+                        </div>
+                        <div class="form-group">
+                            <label for="y2" class="xy-label control-label">y2</label>
+                            <input type="number" class="xy-input form-control" ng-model='Vector2DCtrl.coord[1]["y"]' ng-change='Vector2DCtrl.updateLine(2)' id="y2" placeholder="y">
+                        </div>
+                    </form>
+
+                </div>
+                <div class="col-md-4">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="x3" class="xy-label control-label">x3</label>
+                            <input type="number" class="xy-input form-control" ng-model='Vector2DCtrl.coord[2]["x"]' ng-change='Vector2DCtrl.updateLine(3)' id="x3" placeholder="x">
+                        </div>
+                        <div class="form-group">
+                            <label for="y3" class="xy-label control-label">y3</label>
+                            <input type="number" class="xy-input form-control" ng-model='Vector2DCtrl.coord[2]["y"]' ng-change='Vector2DCtrl.updateLine(3)' id="y3" placeholder="y">
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+{% endblock %}
+
+{% block page_js %}
+{% endblock %}
